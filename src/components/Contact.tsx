@@ -17,10 +17,10 @@ const schema = z.object({
 });
 
 const channels = [
-  { icon: Mail, label: "Email", value: "hello@kishor.dev", href: "mailto:hello@kishor.dev" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+880 1XXX-XXXXXX", href: "https://wa.me/8801000000000" },
-  { icon: IconLinkedin, label: "LinkedIn", value: "/in/kishormahmud", href: "https://linkedin.com" },
-  { icon: IconGithub, label: "GitHub", value: "@kishormahmud", href: "https://github.com" },
+  { icon: Mail, label: "Email", value: "dev.kishor@gmail.com", href: "mailto:dev.kishor@gmail.com" },
+  { icon: MessageCircle, label: "WhatsApp", value: "+880 1984-719041", href: "https://wa.me/8801984719041" },
+  { icon: IconLinkedin, label: "LinkedIn", value: "kishor-mahmud", href: "https://www.linkedin.com/in/kishor-mahmud" },
+  { icon: IconGithub, label: "GitHub", value: "kishormahmud9", href: "https://github.com/kishormahmud9" },
 ] as const;
 
 export function Contact() {

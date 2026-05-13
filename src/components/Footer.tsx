@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
-import { IconGithub, IconLinkedin, IconTwitterX } from "./icons";
+import { Mail, Facebook } from "lucide-react";
+import { IconGithub, IconLinkedin } from "./icons";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -10,10 +10,10 @@ const navLinks = [
 ];
 
 const socials = [
-  { icon: IconGithub, href: "https://github.com", label: "GitHub" },
-  { icon: IconLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: IconTwitterX, href: "https://twitter.com", label: "Twitter / X" },
-  { icon: Mail, href: "mailto:hello@kishor.dev", label: "Email" },
+  { icon: IconGithub, href: "https://github.com/kishormahmud9", label: "GitHub" },
+  { icon: IconLinkedin, href: "https://www.linkedin.com/in/kishor-mahmud", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/kishor.mahmud.009", label: "Facebook" },
+  { icon: Mail, href: "mailto:dev.kishor@gmail.com", label: "Email" },
 ];
 
 export function Footer() {

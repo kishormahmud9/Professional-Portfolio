@@ -244,7 +244,7 @@ export function Hero() {
               className="mt-8 flex items-center justify-center gap-4 text-muted-foreground"
             >
               <motion.a
-                href="https://github.com"
+                href="https://github.com/kishormahmud9"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
@@ -255,7 +255,7 @@ export function Hero() {
                 <IconGithub className="h-4 w-4" />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/kishor-mahmud"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"

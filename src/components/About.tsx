@@ -11,8 +11,8 @@ import avatar from "@/assets/avatar.jpeg";
 import { Code2, Brain, Rocket, Users } from "lucide-react";
 
 const stats = [
-  { label: "Years Experience", numeric: 6, suffix: "+" },
-  { label: "Projects Completed", numeric: 80, suffix: "+" },
+  { label: "Years Experience", numeric: 3, suffix: "+" },
+  { label: "Projects Completed", numeric: 50, suffix: "+" },
   { label: "Happy Clients", numeric: 40, suffix: "+" },
   { label: "Technologies", numeric: 25, suffix: "+" },
 ];
@@ -77,7 +77,7 @@ export function About() {
                 transition={{ delay: 0.4, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 className="absolute -bottom-5 -right-5 rounded-2xl border border-border bg-card p-4 shadow-elegant backdrop-blur"
               >
-                <p className="text-2xl font-bold text-gradient">6+ yrs</p>
+                <p className="text-2xl font-bold text-gradient">3+ yrs</p>
                 <p className="text-xs text-muted-foreground">Building products</p>
               </motion.div>
               {/* Top-left availability indicator */}

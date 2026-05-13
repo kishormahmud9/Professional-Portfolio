@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Moon, Sun, Menu, X, Download } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { Button } from "@/components/ui/button";
+import { Link } from "@tanstack/react-router";
 
 const links = [
   { label: "About", href: "#about" },
@@ -85,19 +86,19 @@ export function Navbar() {
             <button
               onClick={toggle}
               aria-label="Toggle theme"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-foreground"
+              className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-foreground"
             >
               {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
             <Button asChild size="sm" className="hidden rounded-full bg-gradient-primary text-primary-foreground shadow-elegant md:inline-flex">
-              <a href="#contact">
+              <Link to="/resume">
                 <Download className="mr-1 h-4 w-4" /> Resume
-              </a>
+              </Link>
             </Button>
             <button
               onClick={() => setOpen((v) => !v)}
               aria-label="Menu"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border md:hidden"
+              className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-border md:hidden"
             >
               {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>
