@@ -3,12 +3,12 @@ import { Reveal, SectionHeader } from "./Reveal";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { IconGithub } from "./icons";
-import p1 from "@/assets/project-1.jpg";
+import p1 from "@/assets/project-1.png";
 import p2 from "@/assets/project-2.jpg";
 import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.jpg";
 import p5 from "@/assets/project-5.jpg";
-import p6 from "@/assets/project-6.jpg";
+import p6 from "@/assets/project-6.png";
 
 type Cat = "All" | "SaaS" | "AI" | "Dashboard" | "eCommerce";
 
@@ -19,56 +19,67 @@ const projects: {
   stack: string[];
   result: string;
   description: string;
+  liveLink?: string;
+  repoLink?: string;
+  repoLinks?: { label: string; url: string }[];
 }[] = [
-  {
-    title: "AI eCommerce Chatbot",
-    image: p1,
-    cat: ["AI", "eCommerce"],
-    stack: ["Next.js", "OpenAI", "Postgres"],
-    result: "+38% conversion lift",
-    description: "Conversational shopping assistant that recommends products and recovers carts.",
-  },
-  {
-    title: "Multi-Vendor SaaS Platform",
-    image: p2,
-    cat: ["SaaS", "eCommerce"],
-    stack: ["Laravel", "React", "MySQL"],
-    result: "1.2k+ vendors onboarded",
-    description: "Marketplace with vendor dashboards, payouts and subscription tiers.",
-  },
-  {
-    title: "Meal Management SaaS",
-    image: p3,
-    cat: ["SaaS"],
-    stack: ["Next.js", "Prisma", "Stripe"],
-    result: "Used by 30+ messes",
-    description: "Subscription meal planning with billing and member analytics.",
-  },
-  {
-    title: "Realtime Admin Dashboard",
-    image: p4,
-    cat: ["Dashboard"],
-    stack: ["React", "Node", "Socket.io"],
-    result: "<200ms live updates",
-    description: "Operational dashboard with realtime KPIs, alerts and role-based access.",
-  },
-  {
-    title: "Booking Automation System",
-    image: p5,
-    cat: ["SaaS", "AI"],
-    stack: ["Next.js", "OpenAI", "Twilio"],
-    result: "70% less manual ops",
-    description: "AI assistant that books, confirms and reschedules appointments end-to-end.",
-  },
-  {
-    title: "CRM + Lead Tracking Tool",
-    image: p6,
-    cat: ["Dashboard", "SaaS"],
-    stack: ["React", "Express", "Postgres"],
-    result: "3x sales pipeline visibility",
-    description: "Pipeline CRM with lead scoring, automations and team analytics.",
-  },
-];
+    {
+      title: "AI eCommerce Chatbot",
+      image: p1,
+      cat: ["AI", "eCommerce"],
+      stack: ["Next.js", "OpenAI", "Postgres"],
+      result: "+38% conversion lift",
+      description: "Conversational shopping assistant that recommends products and recovers carts.",
+    },
+    {
+      title: "Ai powerd multivendor e-com system",
+      image: p2,
+      cat: ["SaaS", "eCommerce"],
+      stack: ["Laravel", "React", "MySQL"],
+      result: "1.2k+ vendors onboarded",
+      description: "Marketplace with vendor dashboards, payouts and subscription tiers.",
+      repoLink: "https://github.com/kishormahmud9/SAAS-based-multivendor.git",
+    },
+    {
+      title: "Meal Management SaaS",
+      image: p3,
+      cat: ["SaaS"],
+      stack: ["Next.js", "Prisma", "Stripe"],
+      result: "Used by 30+ messes",
+      description: "Subscription meal planning with billing and member analytics.",
+    },
+    {
+      title: "Realtime POS Software",
+      image: p4,
+      cat: ["Dashboard"],
+      stack: ["React", "Node", "Socket.io"],
+      result: "<200ms live updates",
+      description: "Operational dashboard with realtime KPIs, alerts and role-based access.",
+      liveLink: "https://demo.eclipseposapp.com/login",
+      repoLink: "https://github.com/eildev/Electro-POS",
+    },
+    {
+      title: "Booking Automation System",
+      image: p5,
+      cat: ["SaaS", "AI"],
+      stack: ["Next.js", "OpenAI", "Twilio"],
+      result: "70% less manual ops",
+      description: "AI assistant that books, confirms and reschedules appointments end-to-end.",
+    },
+    {
+      title: "Glowthentic e-com",
+      image: p6,
+      cat: ["Dashboard", "SaaS"],
+      stack: ["React", "Express", "Postgres"],
+      result: "3x sales pipeline visibility",
+      description: "Pipeline CRM with lead scoring, automations and team analytics.",
+      liveLink: "https://glowthentic.store/",
+      repoLinks: [
+        { label: "Backend", url: "https://github.com/eildev/Glowthentic-Backend" },
+        { label: "Frontend", url: "https://github.com/eildev/Glowthentic-e-commerce" },
+      ],
+    },
+  ];
 
 const filters: Cat[] = ["All", "SaaS", "AI", "Dashboard", "eCommerce"];
 
@@ -93,11 +104,10 @@ export function Projects() {
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
-                  className={`relative rounded-full border px-5 py-2 text-sm font-medium transition-colors duration-200 ${
-                    filter === f
-                      ? "border-transparent text-primary-foreground"
-                      : "border-border bg-card/60 text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`relative rounded-full border px-5 py-2 text-sm font-medium transition-colors duration-200 ${filter === f
+                    ? "border-transparent text-primary-foreground"
+                    : "border-border bg-card/60 text-muted-foreground hover:text-foreground"
+                    }`}
                 >
                   {filter === f && (
                     <motion.span
@@ -167,21 +177,41 @@ export function Projects() {
                     </div>
 
                     {/* Action buttons */}
-                    <div className="flex gap-2">
-                      <a
-                        href="#"
-                        className="group/btn inline-flex items-center gap-1.5 rounded-full bg-gradient-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground transition-all hover:shadow-elegant"
-                      >
-                        <ExternalLink className="h-3 w-3 transition-transform group-hover/btn:scale-110" />
-                        Live Demo
-                      </a>
-                      <a
-                        href="#"
-                        className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-1.5 text-xs font-medium transition-colors hover:border-primary/40 hover:bg-accent"
-                      >
-                        <IconGithub className="h-3 w-3" />
-                        Code
-                      </a>
+                    <div className="flex flex-wrap gap-2">
+                      {p.liveLink && (
+                        <a
+                          href={p.liveLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="group/btn inline-flex items-center gap-1.5 rounded-full bg-gradient-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground transition-all hover:shadow-elegant"
+                        >
+                          <ExternalLink className="h-3 w-3 transition-transform group-hover/btn:scale-110" />
+                          Live Demo
+                        </a>
+                      )}
+                      {p.repoLink && (
+                        <a
+                          href={p.repoLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-1.5 text-xs font-medium transition-colors hover:border-primary/40 hover:bg-accent"
+                        >
+                          <IconGithub className="h-3 w-3" />
+                          Code
+                        </a>
+                      )}
+                      {p.repoLinks?.map((repo) => (
+                        <a
+                          key={repo.url}
+                          href={repo.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-1.5 text-xs font-medium transition-colors hover:border-primary/40 hover:bg-accent"
+                        >
+                          <IconGithub className="h-3 w-3" />
+                          {repo.label}
+                        </a>
+                      ))}
                     </div>
                   </div>
                 </motion.article>
