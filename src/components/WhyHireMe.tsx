@@ -37,8 +37,8 @@ export function WhyHireMe() {
                   <it.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">{it.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{it.desc}</p>
+                  <h3 className="text-sm sm:text-base font-semibold">{it.title}</h3>
+                  <p className="mt-1 text-xs sm:text-sm text-muted-foreground">{it.desc}</p>
                 </div>
               </motion.div>
             </Reveal>

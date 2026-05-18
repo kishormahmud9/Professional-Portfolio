@@ -93,12 +93,12 @@ export function Skills() {
                   >
                     <g.icon className="h-5 w-5" />
                   </div>
-                  <h3 className="mb-5 font-display text-xl font-semibold">{g.title}</h3>
+                  <h3 className="mb-4 md:mb-5 font-display text-lg sm:text-xl font-semibold">{g.title}</h3>
 
-                  <ul className="space-y-3.5">
+                  <ul className="space-y-3">
                     {g.items.map((it) => (
                       <li key={it.name}>
-                        <div className="mb-1.5 flex justify-between text-sm">
+                        <div className="mb-1 flex justify-between text-xs sm:text-sm">
                           <span className="font-medium">{it.name}</span>
                           <span className="tabular-nums text-muted-foreground">{it.level}%</span>
                         </div>

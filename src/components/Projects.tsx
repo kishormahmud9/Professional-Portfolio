@@ -157,19 +157,19 @@ export function Projects() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
-                    <div className="mb-3 flex items-start justify-between gap-2">
-                      <h3 className="font-display text-xl font-semibold">{p.title}</h3>
+                  <div className="p-5 md:p-6">
+                    <div className="mb-2.5 flex items-start justify-between gap-2">
+                      <h3 className="font-display text-lg sm:text-xl font-semibold">{p.title}</h3>
                       <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
                     </div>
-                    <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
+                    <p className="mb-3.5 text-xs sm:text-sm leading-relaxed text-muted-foreground">{p.description}</p>
 
                     {/* Stack tags */}
-                    <div className="mb-5 flex flex-wrap gap-1.5">
+                    <div className="mb-4 md:mb-5 flex flex-wrap gap-1.5">
                       {p.stack.map((s) => (
                         <span
                           key={s}
-                          className="rounded-md border border-border bg-muted px-2 py-0.5 text-xs text-muted-foreground"
+                          className="rounded-md border border-border bg-muted px-1.5 py-0.5 text-[10px] sm:text-xs text-muted-foreground"
                         >
                           {s}
                         </span>

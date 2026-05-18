@@ -75,10 +75,10 @@ export function About() {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute -bottom-5 -right-5 rounded-2xl border border-border bg-card p-4 shadow-elegant backdrop-blur"
+                className="absolute -bottom-5 -right-5 rounded-2xl border border-border bg-card p-3 md:p-4 shadow-elegant backdrop-blur"
               >
-                <p className="text-2xl font-bold text-gradient">3+ yrs</p>
-                <p className="text-xs text-muted-foreground">Building products</p>
+                <p className="text-xl sm:text-2xl font-bold text-gradient">3+ yrs</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground">Building products</p>
               </motion.div>
               {/* Top-left availability indicator */}
               <motion.div
@@ -100,12 +100,12 @@ export function About() {
           {/* Content column */}
           <div className="lg:col-span-7">
             <Reveal>
-              <p className="text-lg leading-relaxed text-muted-foreground">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
                 I'm <span className="font-semibold text-foreground">Kishor Mahmud</span> — a Senior Full Stack
                 Developer based in Bangladesh, working with founders and teams worldwide. I've shipped SaaS
                 platforms, eCommerce systems, dashboards and AI integrations that serve thousands of users daily.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-3 md:mt-4 text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
                 Today my focus is the intersection of{" "}
                 <span className="font-semibold text-foreground">scalable web engineering</span> and{" "}
                 <span className="font-semibold text-foreground">AI product design</span> — turning models, APIs
@@ -142,12 +142,12 @@ export function About() {
               <motion.div
                 whileHover={{ y: -3, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
-                className="cursor-default rounded-2xl border border-border bg-card/60 p-6 text-center backdrop-blur transition-colors hover:border-primary/30 hover:shadow-elegant"
+                className="cursor-default rounded-2xl border border-border bg-card/60 p-4 md:p-6 text-center backdrop-blur transition-colors hover:border-primary/30 hover:shadow-elegant"
               >
-                <p className="font-display text-4xl font-bold text-gradient md:text-5xl">
+                <p className="font-display text-3xl sm:text-4xl font-bold text-gradient md:text-5xl">
                   <Counter to={s.numeric} suffix={s.suffix} />
                 </p>
-                <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
+                <p className="mt-1 md:mt-2 text-[11px] sm:text-sm text-muted-foreground">{s.label}</p>
               </motion.div>
             </Reveal>
           ))}

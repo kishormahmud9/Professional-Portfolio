@@ -108,7 +108,7 @@ export function Contact() {
             >
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="mb-2 block text-sm font-medium">
+                  <label htmlFor="name" className="mb-1.5 block text-xs sm:text-sm font-medium">
                     Name
                   </label>
                   <Input
@@ -117,11 +117,11 @@ export function Contact() {
                     placeholder="Jane Doe"
                     required
                     maxLength={100}
-                    className="transition-shadow duration-200 focus:shadow-[0_0_0_3px_oklch(0.55_0.22_258_/_0.15)]"
+                    className="text-xs sm:text-sm transition-shadow duration-200 focus:shadow-[0_0_0_3px_oklch(0.55_0.22_258_/_0.15)]"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="mb-2 block text-sm font-medium">
+                  <label htmlFor="email" className="mb-1.5 block text-xs sm:text-sm font-medium">
                     Email
                   </label>
                   <Input
@@ -131,18 +131,18 @@ export function Contact() {
                     placeholder="jane@company.com"
                     required
                     maxLength={255}
-                    className="transition-shadow duration-200 focus:shadow-[0_0_0_3px_oklch(0.55_0.22_258_/_0.15)]"
+                    className="text-xs sm:text-sm transition-shadow duration-200 focus:shadow-[0_0_0_3px_oklch(0.55_0.22_258_/_0.15)]"
                   />
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label htmlFor="budget" className="mb-2 block text-sm font-medium">
+                  <label htmlFor="budget" className="mb-1.5 block text-xs sm:text-sm font-medium">
                     Project Budget
                   </label>
                   <select
                     id="budget"
                     name="budget"
-                    className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm transition-shadow duration-200 focus:outline-none focus:shadow-[0_0_0_3px_oklch(0.55_0.22_258_/_0.15)] focus:ring-0"
+                    className="h-10 w-full rounded-md border border-input bg-background px-3 text-xs sm:text-sm transition-shadow duration-200 focus:outline-none focus:shadow-[0_0_0_3px_oklch(0.55_0.22_258_/_0.15)] focus:ring-0"
                   >
                     <option value="">Select a range (optional)</option>
                     <option>Under $2k</option>
@@ -154,7 +154,7 @@ export function Contact() {
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label htmlFor="message" className="mb-2 block text-sm font-medium">
+                  <label htmlFor="message" className="mb-1.5 block text-xs sm:text-sm font-medium">
                     Project Details
                   </label>
                   <Textarea
@@ -164,7 +164,7 @@ export function Contact() {
                     placeholder="What are you building? Timelines, goals, constraints…"
                     required
                     maxLength={2000}
-                    className="transition-shadow duration-200 focus:shadow-[0_0_0_3px_oklch(0.55_0.22_258_/_0.15)]"
+                    className="text-xs sm:text-sm transition-shadow duration-200 focus:shadow-[0_0_0_3px_oklch(0.55_0.22_258_/_0.15)]"
                   />
                 </div>
               </div>

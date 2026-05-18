@@ -142,14 +142,14 @@ export function Hero() {
             animate="visible"
           >
             {/* Status badge */}
-            <motion.div variants={itemVariants} className="mb-8 flex justify-center">
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card/70 px-5 py-2 text-sm font-medium text-muted-foreground backdrop-blur-md shadow-card">
-                <span className="relative flex h-2.5 w-2.5 shrink-0">
+            <motion.div variants={itemVariants} className="mb-6 md:mb-8 flex justify-center">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur-md shadow-card">
+                <span className="relative flex h-2 w-2 shrink-0">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
                 </span>
                 Available for Senior &amp; Freelance Roles
-                <span className="rounded-full border border-primary/25 bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary">
+                <span className="rounded-full border border-primary/25 bg-primary/10 px-2 py-0.5 text-[10px] font-semibold text-primary">
                   Open to Hire
                 </span>
               </div>
@@ -157,7 +157,7 @@ export function Hero() {
 
             {/* Headline — three clean lines, no rotating word */}
             <motion.div variants={itemVariants}>
-              <h1 className="font-display text-5xl font-bold leading-[1.1] tracking-tight md:text-7xl lg:text-[5.5rem]">
+              <h1 className="font-display text-4xl sm:text-5xl font-bold leading-[1.1] tracking-tight md:text-7xl lg:text-[5.5rem]">
                 I Build
                 <br />
                 <span className="text-gradient">Web Apps &amp; AI</span>
@@ -169,7 +169,7 @@ export function Hero() {
             {/* Subtitle */}
             <motion.p
               variants={itemVariants}
-              className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
+              className="mx-auto mt-5 md:mt-7 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground md:text-xl"
             >
               Helping startups and businesses turn ideas into{" "}
               <span className="font-semibold text-foreground">profitable digital products</span>{" "}
@@ -223,17 +223,17 @@ export function Hero() {
             {/* Mini stats */}
             <motion.div
               variants={itemVariants}
-              className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-4"
+              className="mt-12 md:mt-14 grid grid-cols-2 gap-3 sm:grid-cols-4"
             >
               {STATS.map(({ value, label }) => (
                 <motion.div
                   key={label}
                   whileHover={{ y: -3, scale: 1.02 }}
                   transition={{ duration: 0.18, ease: "easeOut" }}
-                  className="cursor-default rounded-2xl border border-border bg-card/50 px-4 py-4 shadow-card backdrop-blur transition-colors duration-300 hover:border-primary/30 hover:bg-card/80"
+                  className="cursor-default rounded-2xl border border-border bg-card/50 px-3 py-3 md:px-4 md:py-4 shadow-card backdrop-blur transition-colors duration-300 hover:border-primary/30 hover:bg-card/80"
                 >
-                  <div className="font-display text-2xl font-bold text-foreground">{value}</div>
-                  <div className="mt-0.5 text-xs text-muted-foreground">{label}</div>
+                  <div className="font-display text-xl sm:text-2xl font-bold text-foreground">{value}</div>
+                  <div className="mt-0.5 text-[10px] md:text-xs text-muted-foreground">{label}</div>
                 </motion.div>
               ))}
             </motion.div>

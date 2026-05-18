@@ -111,17 +111,23 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             className="mx-auto mt-3 max-w-6xl rounded-3xl glass border p-4 md:hidden"
           >
-            <nav className="flex flex-col">
+            <nav className="flex flex-col gap-1">
               {links.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-accent"
+                  className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-accent transition-colors duration-200"
                 >
                   {l.label}
                 </a>
               ))}
+              <div className="my-2 h-px bg-border/60" />
+              <Button asChild size="default" className="w-full cursor-pointer rounded-2xl bg-gradient-primary text-primary-foreground shadow-elegant">
+                <Link to="/resume" onClick={() => setOpen(false)}>
+                  <Download className="mr-1.5 h-4 w-4" /> Resume
+                </Link>
+              </Button>
             </nav>
           </motion.div>
         )}

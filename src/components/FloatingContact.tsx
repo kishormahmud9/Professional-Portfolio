@@ -19,7 +19,7 @@ export function FloatingContact() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 16, scale: 0.9 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3"
+          className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40 flex flex-col items-center gap-2.5"
         >
           {/* Back to top */}
           <motion.button
@@ -27,7 +27,7 @@ export function FloatingContact() {
             aria-label="Back to top"
             whileHover={{ scale: 1.12, y: -2 }}
             whileTap={{ scale: 0.92 }}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/90 text-muted-foreground shadow-card backdrop-blur transition-colors hover:border-primary/50 hover:text-foreground"
+            className="flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-full border border-border bg-card/90 text-muted-foreground shadow-card backdrop-blur transition-colors hover:border-primary/50 hover:text-foreground cursor-pointer"
           >
             <ArrowUp className="h-4 w-4" />
           </motion.button>
@@ -38,9 +38,9 @@ export function FloatingContact() {
             aria-label="Contact me"
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.93 }}
-            className="relative flex h-14 w-14 items-center justify-center rounded-full bg-gradient-primary text-primary-foreground shadow-elegant transition-shadow hover:shadow-glow"
+            className="relative flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-gradient-primary text-primary-foreground shadow-elegant transition-shadow hover:shadow-glow cursor-pointer"
           >
-            <MessageCircle className="h-6 w-6" />
+            <MessageCircle className="h-5.5 w-5.5 md:h-6 md:w-6" />
             {/* Ping ring */}
             <span className="absolute inset-0 animate-ping rounded-full bg-primary/30" />
           </motion.a>

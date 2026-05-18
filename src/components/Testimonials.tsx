@@ -14,15 +14,15 @@ const testimonials = [
 
 function TestimonialCard({ t }: { t: (typeof testimonials)[number] }) {
   return (
-    <figure className="flex w-80 shrink-0 flex-col rounded-3xl border border-border bg-card/70 p-6 backdrop-blur shadow-card">
-      <Quote className="mb-3 h-6 w-6 text-primary/50" />
-      <blockquote className="flex-1 text-sm leading-relaxed text-foreground/90">
+    <figure className="flex w-72 sm:w-80 shrink-0 flex-col rounded-3xl border border-border bg-card/70 p-5 sm:p-6 backdrop-blur shadow-card">
+      <Quote className="mb-2 sm:mb-3 h-5 w-5 sm:h-6 sm:w-6 text-primary/50" />
+      <blockquote className="flex-1 text-xs sm:text-sm leading-relaxed text-foreground/90">
         "{t.text}"
       </blockquote>
-      <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
+      <div className="mt-4 sm:mt-5 flex items-center justify-between border-t border-border pt-3.5 sm:pt-4">
         <figcaption>
-          <p className="text-sm font-semibold">{t.name}</p>
-          <p className="text-xs text-muted-foreground">{t.role}</p>
+          <p className="text-xs sm:text-sm font-semibold">{t.name}</p>
+          <p className="text-[10px] sm:text-xs text-muted-foreground">{t.role}</p>
         </figcaption>
         <div className="flex gap-0.5 text-amber-400">
           {Array.from({ length: 5 }).map((_, k) => (

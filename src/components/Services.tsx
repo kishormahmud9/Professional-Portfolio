@@ -67,8 +67,8 @@ export function Services() {
                     <s.icon className="h-6 w-6" />
                   </div>
 
-                  <h3 className="mb-2 font-display text-xl font-semibold">{s.title}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                  <h3 className="mb-1.5 font-display text-lg sm:text-xl font-semibold">{s.title}</h3>
+                  <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
                 </div>
               </motion.div>
             </Reveal>

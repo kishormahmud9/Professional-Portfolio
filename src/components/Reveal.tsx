@@ -45,15 +45,15 @@ export function SectionHeader({
   subtitle?: string;
 }) {
   return (
-    <Reveal className="mx-auto mb-16 max-w-2xl text-center">
-      <span className="mb-4 inline-block rounded-full border border-primary/25 bg-primary/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+    <Reveal className="mx-auto mb-12 md:mb-16 max-w-2xl text-center">
+      <span className="mb-3 md:mb-4 inline-block rounded-full border border-primary/25 bg-primary/8 px-3.5 py-1 text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-primary">
         {eyebrow}
       </span>
-      <h2 className="font-display text-4xl font-bold tracking-tight md:text-5xl">
+      <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight md:text-5xl">
         <span className="text-gradient">{title}</span>
       </h2>
       {subtitle && (
-        <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+        <p className="mt-3 md:mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground md:text-lg">
           {subtitle}
         </p>
       )}
