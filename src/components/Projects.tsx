@@ -4,7 +4,7 @@ import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { IconGithub } from "./icons";
 import p1 from "@/assets/project-1.png";
-import p2 from "@/assets/project-2.jpg";
+import p2 from "@/assets/project-2.png";
 import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.jpg";
 import p5 from "@/assets/project-5.jpg";
@@ -32,13 +32,17 @@ const projects: {
       description: "Conversational shopping assistant that recommends products and recovers carts.",
     },
     {
-      title: "Ai powerd multivendor e-com system",
+      title: "AI Powered Multivendor E-commerce System",
       image: p2,
       cat: ["SaaS", "eCommerce"],
-      stack: ["Laravel", "React", "MySQL"],
+      stack: ["Next.js", "Node.js", "PostgreSQL"],
       result: "1.2k+ vendors onboarded",
       description: "Marketplace with vendor dashboards, payouts and subscription tiers.",
-      repoLink: "https://github.com/kishormahmud9/SAAS-based-multivendor.git",
+      liveLink: "https://saas-based-multivendor-frontend.vercel.app/",
+      repoLinks: [
+        { label: "Backend", url: "https://github.com/kishormahmud9/SAAS-based-multivendor-backend" },
+        { label: "Frontend", url: "https://github.com/kishormahmud9/SAAS-based-multivendor-frontend" },
+      ],
     },
     {
       title: "Meal Management SaaS",
